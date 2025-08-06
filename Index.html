@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
     <script src="https://kit.fontawesome.com/30a80200c9.js" crossorigin="anonymous"></script>
 </head>
@@ -11,7 +11,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="./logo5.png" class="logo">
+                <img src="images/logo5.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./Jayshiva_Passportsizepic.png">
+                    <img src="images/Jayshiva_Passportsizepic.png">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -123,7 +123,7 @@
                     <h2>Microsoft Certification</h2>
                     <p>Successfully got my certification in Microsoft Azure Fundamentals with 925/1000</p>
                     <!-- "View Certificate" link for Certificate 1 -->
-                    <a href="#" class="view-certificate-link" data-certificate-url="Azure.pdf">View Certificate </a>
+                    <a href="#" class="view-certificate-link" data-certificate-url="images/Azure.pdf">View Certificate </a>
                 </div>
                 <div>
                     <i class="fa-solid fa-trophy"></i>
@@ -133,7 +133,7 @@
                         𝗖𝗚𝗣𝗔
                         </p>
                     <!-- "View Certificate" link for Certificate 2 -->
-                    <a href="#" class="view-certificate-link" data-certificate-url="UR.png">View Certificate </a>
+                    <a href="#" class="view-certificate-link" data-certificate-url="images/UR.png">View Certificate </a>
                 </div>
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -141,7 +141,7 @@
                     <p>Successfully completed an Internship of UI/UX designing organized by C Networq, Rajapalayam and developed a prototype of a Tourist spot finder app (using Adobe XD)</p>
                     <!-- "View Certificate" link for Certificate 3 -->
                     <!-- "View Certificate" link for Certificate 3 with URL-encoded file path -->
-<a href="#" class="view-certificate-link" data-certificate-url="Cn.png">View certificate</a>
+<a href="#" class="view-certificate-link" data-certificate-url="images/Cn.png">View certificate</a>
 
                 </div>
             </div>
@@ -154,7 +154,7 @@
             <h1 class="sub-title">My Projects</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="Yt.png">
+                    <img src="images/Yt.png">
                     <div class="layer">
                         <h3><b>Youtube Clone Website</b></h3>
                         <p>Clone Website of Youtube </p>
@@ -163,7 +163,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="flone.png">
+                    <img src="images/flone.png">
                     <div class="layer">
                         <h3><b>E-commerce Site</b></h3>
                         <p> Product page of a developing E-Commerce website created using Html,Css,JavaScript</p>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="drowsi.png">
+                    <img src="images/drowsi.png">
                     <div class="layer">
                         <h3><b>Drowsiness Detection System</b></h3>
                         <p> As the team lead, I successfully managed the Drowsiness Detection project under "Naan Mudhalvan" scheme</p>
@@ -213,80 +213,6 @@
          </div>
      </div>
    </div>
-     <script>
-
-        var tablinks= document.getElementsByClassName("tab-links");
-        var tabcontents= document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-        
-     </script>
-     <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-
-        }
-     </script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyC8ZDSa8YCAd5YuesfyTN8vrhwH5bokREmFQzsAwWhB31biq7_yA6HP5hz_svV2yikLQ/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      msg.innerHTML = "Sending message..."; // Show the message immediately
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          msg.innerHTML = "Message sent successfully"; // Update the success message
-          form.reset(); // Reset the form
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          msg.innerHTML = "An error occurred. Please try again later."; // Show an error message
-        });
-    });
-  </script>
-  
-  
-      
-<script>
-    // Get references to all "View Certificate" links
-    const viewCertificateLinks = document.querySelectorAll(".view-certificate-link");
-
-    // Add click event listener to each link
-    viewCertificateLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            // Prevent the default link behavior (e.g., scrolling to the top of the page)
-            event.preventDefault();
-
-            // Get the URL of the certificate image or PDF from the data-certificate-url attribute
-            const certificateUrl = this.getAttribute("data-certificate-url");
-
-            // Check if the URL points to an image or a PDF
-            if (certificateUrl.toLowerCase().endsWith(".jpg") || certificateUrl.toLowerCase().endsWith(".jpeg") || certificateUrl.toLowerCase().endsWith(".png")) {
-                // If it's an image URL, open the image in a new window or tab
-                window.open(certificateUrl, "_blank", "width=800,height=600");
-            } else if (certificateUrl.toLowerCase().endsWith(".pdf")) {
-                // If it's a PDF URL, open the PDF in a new window or tab
-                window.open(certificateUrl, "_blank");
-            }
-        });
-    });
-</script>
-
-
+     <script src="js/main.js"></script>
 </body>
 </html>
