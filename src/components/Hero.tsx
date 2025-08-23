@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Phone, MapPin, Download } from "lucide-react";
-import portraitImage from "@/assets/jayshiva-portrait.png";
+import portraitImage from "@/assets/Jayshiva_Passportsizepic.png";
 
 const Hero = () => {
   return (
